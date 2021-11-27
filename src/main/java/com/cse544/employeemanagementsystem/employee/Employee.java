@@ -1,7 +1,6 @@
 package com.cse544.employeemanagementsystem.employee;
 
-import com.cse544.employeemanagementsystem.User;
-import lombok.Data;
+import com.cse544.employeemanagementsystem.authentication.User;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
