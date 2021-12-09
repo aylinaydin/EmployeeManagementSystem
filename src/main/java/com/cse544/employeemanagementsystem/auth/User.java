@@ -1,6 +1,5 @@
-package com.cse544.employeemanagementsystem.authentication;
+package com.cse544.employeemanagementsystem.auth;
 
-import com.cse544.employeemanagementsystem.authentication.Role;
 import lombok.*;
 
 import javax.persistence.*;
@@ -33,4 +32,10 @@ public class User {
     )
     private Set<Role> roles = new HashSet<>();
 
+    public User(@NonNull String username, @NonNull String email, @NonNull String password, boolean enabled) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.enabled = enabled;
+    }
 }

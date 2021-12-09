@@ -1,20 +1,23 @@
 package com.cse544.employeemanagementsystem.employee;
 
-import com.cse544.employeemanagementsystem.authentication.User;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import com.cse544.employeemanagementsystem.auth.User;
+import lombok.*;
 
-@Getter
-@Setter
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.Table;
+
+@Data
+@Entity
+@NoArgsConstructor
 public class Employee extends User {
     @NonNull
     private String title;
     @NonNull
-    private int salary;
+    private Integer salary;
     @NonNull
-    private int annualLeave;
-    private int grade;
-    private int managerId;
+    private Integer annualLeave;
+    private Integer grade;
+    private Integer managerId;
 
 }

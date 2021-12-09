@@ -1,31 +1,29 @@
 package com.cse544.employeemanagementsystem.admin;
 
+import com.cse544.employeemanagementsystem.auth.User;
 import com.cse544.employeemanagementsystem.employee.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
-@Controller
-@ResponseBody
+@RestController
 @RequestMapping("/admin")
 public class AdminController {
     @Autowired
     AdminService adminService;
 
-
-    public boolean addEmployee(Employee emp){
-        return adminService.addEmployee(emp);
+    @PostMapping("/employee")
+    public Employee addEmployee(@RequestBody Employee employee){
+        return adminService.addEmployee(employee);
     }
-    public boolean deleteEmployee(Employee emp){
-        return adminService.deleteEmployee(emp);
+    @DeleteMapping("/{id}")
+    public void deleteEmployee(@PathVariable UUID id){
+         adminService.deleteEmployee(id);
     }
-    public boolean editEmployee(UUID employeeId){
-        return adminService.editEmployee(employeeId);
+    @PutMapping()
+    public Employee editEmployee(@RequestBody Employee employee){
+        return adminService.editEmployee(employee);
     }
     public boolean updateSalaryForAllEmployees(){
         return adminService.updateSalaryForAllEmployees();
