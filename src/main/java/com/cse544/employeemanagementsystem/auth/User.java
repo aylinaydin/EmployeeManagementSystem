@@ -38,4 +38,12 @@ public class User {
         this.password = password;
         this.enabled = enabled;
     }
+
+    public User(@NonNull String username, @NonNull String email, @NonNull String password, boolean enabled, Set<Role> roles) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.enabled = enabled;
+        this.roles = roles;
+    }
 }

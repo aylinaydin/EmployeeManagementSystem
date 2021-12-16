@@ -5,6 +5,8 @@ import com.cse544.employeemanagementsystem.employee.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class AuthService {
     @Autowired
@@ -18,7 +20,11 @@ public class AuthService {
     }
 
     public Employee signUpUser(Employee employee) {
-        return userRepository.save(employee);
+        Optional<Employee> emp = employeeRepository.findById(employee.getId());
+        if(emp.isEmpty()){
+            return null;
+        }
+        return employeeRepository.save(employee);
     }
 
     public User login(String email, String password) {

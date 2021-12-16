@@ -20,4 +20,12 @@ public class Employee extends User {
     private Integer grade;
     private Integer managerId;
 
+    public Employee(@NonNull String username, @NonNull String email, @NonNull String password, boolean enabled, @NonNull String title, @NonNull Integer salary, @NonNull Integer annualLeave, Integer grade, Integer managerId) {
+        super(username, email, password, enabled);
+        this.title = title;
+        this.salary = salary;
+        this.annualLeave = annualLeave;
+        this.grade = grade;
+        this.managerId = managerId;
+    }
 }

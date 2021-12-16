@@ -3,6 +3,9 @@ package com.cse544.employeemanagementsystem.auth;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
+import org.springframework.context.event.EventListener;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -16,6 +19,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Table(name = "roles")
 public class Role implements Serializable {
+
     private static final long serialVersionUID = 1L;
     public static final String USER = "USER";
     public static final String ADMIN = "ADMIN";
@@ -25,8 +29,8 @@ public class Role implements Serializable {
     @Id
     @Column(name = "role_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID roleId;
-
+    private long roleId;
+    @Column(unique = true)
     private String name;
 
     @ManyToMany(mappedBy = "roles")
@@ -62,4 +66,6 @@ public class Role implements Serializable {
     public String toString() {
         return "Role [name=" + name + "]" + "[id=" + roleId + "]";
     }
+
+
 }
