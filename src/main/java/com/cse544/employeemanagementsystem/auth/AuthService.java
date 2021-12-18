@@ -1,9 +1,11 @@
 package com.cse544.employeemanagementsystem.auth;
 
 import com.cse544.employeemanagementsystem.employee.Employee;
+import com.cse544.employeemanagementsystem.employee.EmployeeDto;
 import com.cse544.employeemanagementsystem.employee.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -15,24 +17,60 @@ public class AuthService {
     @Autowired
     EmployeeRepository employeeRepository;
 
-    public User getUserByEmail(String email) {
-        return userRepository.findByEmail(email);
+    public UserDto getUserByEmail(String email) {
+        User user = userRepository.findByEmail(email);
+        return userToUserDto(user);
     }
 
-    public Employee signUpUser(Employee employee) {
-        Optional<Employee> emp = employeeRepository.findById(employee.getId());
-        if(emp.isEmpty()){
+    @Transactional(readOnly = true)
+    public EmployeeDto signUpUser(String email, String password) {
+        Employee emp = employeeRepository.findByEmail(email);
+        if(emp==null){
             return null;
         }
-        return employeeRepository.save(employee);
+        emp.setPassword(password);
+        Employee employee = employeeRepository.save(emp);
+
+        return employeeToEmployeeDto(employee);
     }
 
-    public User login(String email, String password) {
+    @Transactional(readOnly = true)
+    public UserDto login(String email, String password) {
         User user = userRepository.findByEmail(email);
         if (user.getPassword().equals(password)) {
-            return user;
+            return userToUserDto(user);
         } else {
-            return null;
+            return null; // TODO: 400 döndür
         }
+    }
+
+    private UserDto userToUserDto(User user) {
+        RoleInfo roleInfo = new RoleInfo(user.getRole().getRoleId(), user.getRole().getName());
+        return new UserDto(
+                user.getId(),
+                user.getUsername(),
+                user.getEmail(),
+                user.getPassword(),
+                user.isEnabled(),
+                roleInfo
+        );
+    }
+
+    private EmployeeDto employeeToEmployeeDto(Employee employee) {
+        UserDto userDto = userToUserDto(employee);
+
+        return new EmployeeDto(
+                userDto.getId(),
+                userDto.getUsername(),
+                userDto.getEmail(),
+                userDto.getPassword(),
+                userDto.isEnabled(),
+                userDto.getRole(),
+                employee.getTitle(),
+                employee.getSalary(),
+                employee.getAnnualLeave(),
+                employee.getGrade(),
+                employee.getManagerId()
+        );
     }
 }

@@ -31,6 +31,9 @@ export class SignupComponent implements OnInit {
       if(!employee){
         console.log("Cannot signup this user");
       }
+      if(employee){
+        console.log("success sign up");
+      }
 
     })
 

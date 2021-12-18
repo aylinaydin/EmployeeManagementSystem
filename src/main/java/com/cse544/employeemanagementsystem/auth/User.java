@@ -24,13 +24,13 @@ public class User {
     private String password;
     private boolean enabled;
 
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(
             name = "users_roles",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-    private Set<Role> roles = new HashSet<>();
+    private Role role;
 
     public User(@NonNull String username, @NonNull String email, @NonNull String password, boolean enabled) {
         this.username = username;
@@ -39,11 +39,11 @@ public class User {
         this.enabled = enabled;
     }
 
-    public User(@NonNull String username, @NonNull String email, @NonNull String password, boolean enabled, Set<Role> roles) {
+    public User(@NonNull String username, @NonNull String email, @NonNull String password, boolean enabled, Role role) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.enabled = enabled;
-        this.roles = roles;
+        this.role = role;
     }
 }
