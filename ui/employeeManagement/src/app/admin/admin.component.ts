@@ -1,20 +1,36 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "../service/auth.service";
+import {Employee} from "../interfaces/Employee";
+import {AdminService} from "../service/admin.service";
 
+const ELEMENT_DATA: Employee[] = [
+];
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss']
 })
-export class AdminComponent implements OnInit {
+export class AdminComponent implements OnInit{
 
-  constructor(private authService: AuthService) { }
+  displayedColumns: string[] = ['position', 'name', 'surname', 'title', 'salary', 'leaves','grade','manager','actions'];
+  dataSource = ELEMENT_DATA;
+  private _element: any;
+  employeeList: Employee[] = [];
+
+  constructor(private adminService: AdminService){
+
+  }
 
   ngOnInit(): void {
+    this.adminService.getEmployees().subscribe(value => {
+      this.employeeList = value;
+      console.log(value);
+    });
   }
 
-  onLogoutClick() {
-    this.authService.logout();
+  edit(element: any) {
+    this._element = element;
   }
+
+
 
 }

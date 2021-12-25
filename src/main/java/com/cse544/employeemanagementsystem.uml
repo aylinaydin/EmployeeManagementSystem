@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Projects/EmployeeManagementSystem/EmployeeManagementSystem/src/main/java/com/cse544/employeemanagementsystem</OriginalElement>
+  <nodes>
+    <node x="828.0" y="1581.0">com.cse544.employeemanagementsystem.manager.Manager</node>
+    <node x="1069.3520359848476" y="2169.0">com.cse544.employeemanagementsystem.manager.ManagerController</node>
+    <node x="1453.6020359848476" y="2169.0">com.cse544.employeemanagementsystem.employee.EmployeeController</node>
+    <node x="75.32552083333326" y="2158.0">com.cse544.employeemanagementsystem.auth.AuthController</node>
+    <node x="1439.3520359848476" y="1920.0">com.cse544.employeemanagementsystem.employee.EmployeeService</node>
+    <node x="587.3667140151506" y="1898.0">com.cse544.employeemanagementsystem.auth.AuthService</node>
+    <node x="1772.6020359848476" y="2136.0">com.cse544.employeemanagementsystem.admin.AdminController</node>
+    <node x="483.8255208333332" y="1199.5">com.cse544.employeemanagementsystem.admin.Admin</node>
+    <node x="1069.3520359848476" y="1920.0">com.cse544.employeemanagementsystem.manager.ManagerService</node>
+    <node x="482.99999999999994" y="1603.0">com.cse544.employeemanagementsystem.Mapper</node>
+    <node x="30.131865530303003" y="461.0">com.cse544.employeemanagementsystem.auth.UserDto</node>
+    <node x="599.3520359848475" y="461.0">com.cse544.employeemanagementsystem.auth.User</node>
+    <node x="74.99171401515059" y="77.0">com.cse544.employeemanagementsystem.auth.RoleInfo</node>
+    <node x="907.8255208333331" y="705.0">com.cse544.employeemanagementsystem.auth.RoleRepository</node>
+    <node x="1101.875" y="1592.0">com.cse544.employeemanagementsystem.employee.EmployeeRepository</node>
+    <node x="1918.6167140151506" y="1887.0">com.cse544.employeemanagementsystem.admin.AdminService</node>
+    <node x="687.8255208333331" y="1034.0">com.cse544.employeemanagementsystem.employee.Employee</node>
+    <node x="77.34019886363637" y="1034.0">com.cse544.employeemanagementsystem.employee.EmployeeDto</node>
+    <node x="748.2417140151506" y="0.0">com.cse544.employeemanagementsystem.auth.Role</node>
+    <node x="242.2005208333332" y="1614.0">com.cse544.employeemanagementsystem.auth.UserRepository</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthController" target="com.cse544.employeemanagementsystem.auth.UserDto" relationship="DEPENDENCY">
+      <point x="-59.5" y="-61.5" />
+      <point x="134.82552083333326" y="2115.0" />
+      <point x="65.32552083333326" y="2115.0" />
+      <point x="65.32552083333326" y="2085.0" />
+      <point x="6.0" y="2085.0" />
+      <point x="6.0" y="1012.0" />
+      <point x="11.5" y="1012.0" />
+      <point x="11.5" y="1002.0" />
+      <point x="60.79853219696963" y="1002.0" />
+      <point x="-61.333333333333336" y="259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.UserRepository" target="com.cse544.employeemanagementsystem.auth.User" relationship="DEPENDENCY">
+      <point x="0.0" y="-28.0" />
+      <point x="331.7005208333332" y="1539.0" />
+      <point x="473.3255208333332" y="1539.0" />
+      <point x="473.3255208333332" y="1012.0" />
+      <point x="468.0755208333332" y="1012.0" />
+      <point x="468.0755208333332" y="1002.0" />
+      <point x="645.3520359848475" y="1002.0" />
+      <point x="-46.0" y="259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.RoleRepository" target="com.cse544.employeemanagementsystem.auth.Role" relationship="DEPENDENCY">
+      <point x="1.1368683772161603E-13" y="-15.5" />
+      <point x="982.3255208333333" y="440.0" />
+      <point x="889.8520359848475" y="440.0" />
+      <point x="889.8520359848475" y="430.0" />
+      <point x="883.2417140151506" y="430.0" />
+      <point x="45.0" y="204.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthService" target="com.cse544.employeemanagementsystem.auth.UserRepository" relationship="DEPENDENCY">
+      <point x="-68.0" y="-72.5" />
+      <point x="655.3667140151506" y="1865.0" />
+      <point x="234.09019886363637" y="1865.0" />
+      <point x="234.09019886363637" y="1765.0" />
+      <point x="286.9505208333332" y="1765.0" />
+      <point x="-44.75" y="28.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.admin.Admin" target="com.cse544.employeemanagementsystem.auth.User" relationship="GENERALIZATION">
+      <point x="0.0" y="-61.0" />
+      <point x="575.8255208333333" y="1012.0" />
+      <point x="737.3520359848475" y="1012.0" />
+      <point x="46.0" y="259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthController" target="com.cse544.employeemanagementsystem.auth.AuthService" relationship="DEPENDENCY">
+      <point x="-59.5" y="-61.5" />
+      <point x="134.82552083333326" y="2115.0" />
+      <point x="65.32552083333326" y="2115.0" />
+      <point x="65.32552083333326" y="2085.0" />
+      <point x="655.3667140151506" y="2085.0" />
+      <point x="-68.0" y="72.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.manager.ManagerController" target="com.cse544.employeemanagementsystem.manager.ManagerService" relationship="DEPENDENCY">
+      <point x="-87.5" y="-50.5" />
+      <point x="1156.8520359848476" y="2115.0" />
+      <point x="1321.8520359848476" y="2115.0" />
+      <point x="1321.8520359848476" y="2105.0" />
+      <point x="1156.8520359848476" y="2105.0" />
+      <point x="-87.5" y="50.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthService" target="com.cse544.employeemanagementsystem.auth.UserDto" relationship="DEPENDENCY">
+      <point x="-68.0" y="-72.5" />
+      <point x="655.3667140151506" y="1865.0" />
+      <point x="234.09019886363637" y="1865.0" />
+      <point x="234.09019886363637" y="1765.0" />
+      <point x="17.0" y="1765.0" />
+      <point x="17.0" y="1012.0" />
+      <point x="11.5" y="1012.0" />
+      <point x="11.5" y="1002.0" />
+      <point x="60.79853219696963" y="1002.0" />
+      <point x="-61.333333333333336" y="259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.Employee" target="com.cse544.employeemanagementsystem.auth.User" relationship="GENERALIZATION">
+      <point x="0.0" y="-226.5" />
+      <point x="787.3255208333331" y="1012.0" />
+      <point x="737.3520359848475" y="1012.0" />
+      <point x="46.0" y="259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.admin.AdminService" target="com.cse544.employeemanagementsystem.employee.Employee" relationship="DEPENDENCY">
+      <point x="68.0" y="-83.5" />
+      <point x="2122.6167140151506" y="1865.0" />
+      <point x="2059.8667140151506" y="1865.0" />
+      <point x="2059.8667140151506" y="1559.0" />
+      <point x="1525.9770359848476" y="1559.0" />
+      <point x="1525.9770359848476" y="1509.0" />
+      <point x="837.0755208333331" y="1509.0" />
+      <point x="49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.Mapper" target="com.cse544.employeemanagementsystem.auth.User" relationship="DEPENDENCY">
+      <point x="81.25" y="-39.0" />
+      <point x="726.75" y="1559.0" />
+      <point x="897.3255208333331" y="1559.0" />
+      <point x="897.3255208333331" y="1529.0" />
+      <point x="473.32552083333314" y="1529.0" />
+      <point x="473.3255208333332" y="1012.0" />
+      <point x="468.0755208333332" y="1012.0" />
+      <point x="468.0755208333332" y="1002.0" />
+      <point x="645.3520359848475" y="1002.0" />
+      <point x="-46.0" y="259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.admin.AdminController" target="com.cse544.employeemanagementsystem.admin.AdminService" relationship="DEPENDENCY">
+      <point x="-69.0" y="-83.5" />
+      <point x="1841.6020359848476" y="2115.0" />
+      <point x="1949.075520833333" y="2115.0" />
+      <point x="1949.075520833333" y="2075.0" />
+      <point x="1986.6167140151506" y="2075.0" />
+      <point x="-68.0" y="83.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthService" target="com.cse544.employeemanagementsystem.auth.User" relationship="DEPENDENCY">
+      <point x="-68.0" y="-72.5" />
+      <point x="655.3667140151506" y="1865.0" />
+      <point x="234.09019886363637" y="1865.0" />
+      <point x="234.09019886363637" y="1765.0" />
+      <point x="141.60203598484748" y="1765.0" />
+      <point x="141.60203598484748" y="1529.0" />
+      <point x="462.8255208333332" y="1529.0" />
+      <point x="462.8255208333332" y="1012.0" />
+      <point x="468.0755208333332" y="1012.0" />
+      <point x="468.0755208333332" y="1002.0" />
+      <point x="645.3520359848475" y="1002.0" />
+      <point x="-46.0" y="259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeController" target="com.cse544.employeemanagementsystem.employee.EmployeeService" relationship="DEPENDENCY">
+      <point x="-63.25" y="-50.5" />
+      <point x="1516.8520359848476" y="2115.0" />
+      <point x="1633.3520359848476" y="2115.0" />
+      <point x="1633.3520359848476" y="2095.0" />
+      <point x="1507.3520359848476" y="2095.0" />
+      <point x="-68.0" y="50.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.admin.AdminService" target="com.cse544.employeemanagementsystem.employee.EmployeeRepository" relationship="DEPENDENCY">
+      <point x="68.0" y="-83.5" />
+      <point x="2122.6167140151506" y="1865.0" />
+      <point x="2059.8667140151506" y="1865.0" />
+      <point x="2059.8667140151506" y="1755.0" />
+      <point x="1168.625" y="1755.0" />
+      <point x="-66.75" y="50.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.manager.ManagerService" target="com.cse544.employeemanagementsystem.employee.EmployeeRepository" relationship="DEPENDENCY">
+      <point x="-87.5" y="-50.5" />
+      <point x="1156.8520359848476" y="1855.0" />
+      <point x="816.5901988636363" y="1855.0" />
+      <point x="816.5901988636363" y="1835.0" />
+      <point x="1168.625" y="1835.0" />
+      <point x="-66.75" y="50.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeRepository" target="com.cse544.employeemanagementsystem.employee.Employee" relationship="DEPENDENCY">
+      <point x="0.0" y="-50.0" />
+      <point x="1235.375" y="1559.0" />
+      <point x="1525.9770359848476" y="1559.0" />
+      <point x="1525.9770359848476" y="1509.0" />
+      <point x="837.0755208333331" y="1509.0" />
+      <point x="49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.UserDto" target="com.cse544.employeemanagementsystem.auth.RoleInfo" relationship="TO_ONE">
+      <point x="-46.0" y="-259.5" />
+      <point x="76.131865530303" y="440.0" />
+      <point x="105.65838068181722" y="440.0" />
+      <point x="-61.33333333333334" y="127.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.User" target="com.cse544.employeemanagementsystem.auth.Role" relationship="DEPENDENCY">
+      <point x="46.0" y="-259.5" />
+      <point x="737.3520359848475" y="440.0" />
+      <point x="889.8520359848475" y="440.0" />
+      <point x="889.8520359848475" y="430.0" />
+      <point x="883.2417140151506" y="430.0" />
+      <point x="45.0" y="204.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.Role" target="com.cse544.employeemanagementsystem.auth.User" relationship="DEPENDENCY">
+      <point x="45.0" y="204.5" />
+      <point x="883.2417140151506" y="430.0" />
+      <point x="889.8520359848475" y="430.0" />
+      <point x="889.8520359848475" y="440.0" />
+      <point x="737.3520359848475" y="440.0" />
+      <point x="46.0" y="-259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeService" target="com.cse544.employeemanagementsystem.employee.EmployeeRepository" relationship="DEPENDENCY">
+      <point x="-68.0" y="-50.5" />
+      <point x="1507.3520359848476" y="1865.0" />
+      <point x="1243.325520833333" y="1865.0" />
+      <point x="1243.325520833333" y="1765.0" />
+      <point x="1168.625" y="1765.0" />
+      <point x="-66.75" y="50.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthService" target="com.cse544.employeemanagementsystem.employee.EmployeeRepository" relationship="DEPENDENCY">
+      <point x="-68.0" y="-72.5" />
+      <point x="655.3667140151506" y="1865.0" />
+      <point x="234.09019886363637" y="1865.0" />
+      <point x="234.09019886363637" y="1825.0" />
+      <point x="1168.625" y="1825.0" />
+      <point x="-66.75" y="50.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthService" target="com.cse544.employeemanagementsystem.employee.EmployeeDto" relationship="DEPENDENCY">
+      <point x="-68.0" y="-72.5" />
+      <point x="655.3667140151506" y="1865.0" />
+      <point x="234.09019886363637" y="1865.0" />
+      <point x="234.09019886363637" y="1765.0" />
+      <point x="130.60203598484748" y="1765.0" />
+      <point x="130.60203598484748" y="1559.0" />
+      <point x="144.6167140151506" y="1559.0" />
+      <point x="144.6167140151506" y="1519.0" />
+      <point x="127.09019886363637" y="1519.0" />
+      <point x="-49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.manager.ManagerController" target="com.cse544.employeemanagementsystem.manager.ManagerService" relationship="TO_ONE">
+      <point x="87.5" y="-50.5" />
+      <point x="87.5" y="50.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeService" target="com.cse544.employeemanagementsystem.employee.EmployeeDto" relationship="DEPENDENCY">
+      <point x="-68.0" y="-50.5" />
+      <point x="1507.3520359848476" y="1865.0" />
+      <point x="1243.325520833333" y="1865.0" />
+      <point x="1243.325520833333" y="1735.0" />
+      <point x="437.625" y="1735.0" />
+      <point x="437.625" y="1559.0" />
+      <point x="144.6167140151506" y="1559.0" />
+      <point x="144.6167140151506" y="1519.0" />
+      <point x="127.09019886363637" y="1519.0" />
+      <point x="-49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.admin.AdminService" target="com.cse544.employeemanagementsystem.employee.EmployeeRepository" relationship="TO_ONE">
+      <point x="-68.0" y="-83.5" />
+      <point x="1986.6167140151506" y="1855.0" />
+      <point x="1784.1020359848476" y="1855.0" />
+      <point x="1784.1020359848476" y="1725.0" />
+      <point x="1302.125" y="1725.0" />
+      <point x="66.75" y="50.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthController" target="com.cse544.employeemanagementsystem.auth.AuthService" relationship="TO_ONE">
+      <point x="59.5" y="-61.5" />
+      <point x="253.82552083333326" y="2115.0" />
+      <point x="791.3667140151506" y="2115.0" />
+      <point x="68.0" y="72.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.manager.ManagerService" target="com.cse544.employeemanagementsystem.employee.EmployeeDto" relationship="DEPENDENCY">
+      <point x="-87.5" y="-50.5" />
+      <point x="1156.8520359848476" y="1855.0" />
+      <point x="816.5901988636363" y="1855.0" />
+      <point x="816.5901988636363" y="1755.0" />
+      <point x="130.60203598484748" y="1755.0" />
+      <point x="130.60203598484748" y="1559.0" />
+      <point x="144.6167140151506" y="1559.0" />
+      <point x="144.6167140151506" y="1519.0" />
+      <point x="127.09019886363637" y="1519.0" />
+      <point x="-49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.admin.AdminController" target="com.cse544.employeemanagementsystem.Mapper" relationship="DEPENDENCY">
+      <point x="-69.0" y="-83.5" />
+      <point x="1841.6020359848476" y="2115.0" />
+      <point x="1949.075520833333" y="2115.0" />
+      <point x="1949.075520833333" y="2075.0" />
+      <point x="244.59019886363637" y="2075.0" />
+      <point x="244.59019886363637" y="1815.0" />
+      <point x="331.9505208333332" y="1815.0" />
+      <point x="331.9505208333332" y="1745.0" />
+      <point x="645.5" y="1745.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthService" target="com.cse544.employeemanagementsystem.auth.UserRepository" relationship="TO_ONE">
+      <point x="68.0" y="-72.5" />
+      <point x="791.3667140151506" y="1865.0" />
+      <point x="922.2417140151506" y="1865.0" />
+      <point x="922.2417140151506" y="1785.0" />
+      <point x="376.45052083333326" y="1785.0" />
+      <point x="44.75" y="28.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.Mapper" target="com.cse544.employeemanagementsystem.employee.Employee" relationship="DEPENDENCY">
+      <point x="81.25" y="-39.0" />
+      <point x="726.75" y="1559.0" />
+      <point x="897.3255208333331" y="1559.0" />
+      <point x="897.3255208333331" y="1549.0" />
+      <point x="1525.9770359848476" y="1549.0" />
+      <point x="1525.9770359848476" y="1509.0" />
+      <point x="837.0755208333331" y="1509.0" />
+      <point x="49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeDto" target="com.cse544.employeemanagementsystem.auth.RoleInfo" relationship="DEPENDENCY">
+      <point x="49.75" y="-226.5" />
+      <point x="226.59019886363637" y="1012.0" />
+      <point x="418.0755208333332" y="1012.0" />
+      <point x="418.0755208333332" y="440.0" />
+      <point x="166.9917140151506" y="440.0" />
+      <point x="0.0" y="127.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.Mapper" target="com.cse544.employeemanagementsystem.auth.RoleInfo" relationship="CREATE">
+      <point x="-81.25" y="-39.0" />
+      <point x="564.25" y="1549.0" />
+      <point x="392.2421874999999" y="1549.0" />
+      <point x="392.2421874999999" y="1519.0" />
+      <point x="429.0755208333332" y="1519.0" />
+      <point x="429.0755208333332" y="430.0" />
+      <point x="228.32504734848396" y="430.0" />
+      <point x="61.33333333333334" y="127.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeService" target="com.cse544.employeemanagementsystem.employee.Employee" relationship="DEPENDENCY">
+      <point x="-68.0" y="-50.5" />
+      <point x="1507.3520359848476" y="1865.0" />
+      <point x="1243.325520833333" y="1865.0" />
+      <point x="1243.325520833333" y="1735.0" />
+      <point x="1618.1020359848476" y="1735.0" />
+      <point x="1618.1020359848476" y="1559.0" />
+      <point x="1525.9770359848476" y="1559.0" />
+      <point x="1525.9770359848476" y="1509.0" />
+      <point x="837.0755208333331" y="1509.0" />
+      <point x="49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.admin.AdminController" target="com.cse544.employeemanagementsystem.employee.Employee" relationship="DEPENDENCY">
+      <point x="-69.0" y="-83.5" />
+      <point x="1841.6020359848476" y="2115.0" />
+      <point x="1949.075520833333" y="2115.0" />
+      <point x="1949.075520833333" y="2075.0" />
+      <point x="2201.1167140151506" y="2075.0" />
+      <point x="2201.1167140151506" y="1559.0" />
+      <point x="1525.9770359848476" y="1559.0" />
+      <point x="1525.9770359848476" y="1509.0" />
+      <point x="837.0755208333331" y="1509.0" />
+      <point x="49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.manager.ManagerService" target="com.cse544.employeemanagementsystem.employee.Employee" relationship="DEPENDENCY">
+      <point x="-87.5" y="-50.5" />
+      <point x="1156.8520359848476" y="1855.0" />
+      <point x="816.5901988636363" y="1855.0" />
+      <point x="816.5901988636363" y="1755.0" />
+      <point x="1091.375" y="1755.0" />
+      <point x="1091.375" y="1559.0" />
+      <point x="1525.9770359848476" y="1559.0" />
+      <point x="1525.9770359848476" y="1509.0" />
+      <point x="837.0755208333331" y="1509.0" />
+      <point x="49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthService" target="com.cse544.employeemanagementsystem.employee.Employee" relationship="DEPENDENCY">
+      <point x="-68.0" y="-72.5" />
+      <point x="655.3667140151506" y="1865.0" />
+      <point x="234.09019886363637" y="1865.0" />
+      <point x="234.09019886363637" y="1765.0" />
+      <point x="1050.450520833333" y="1765.0" />
+      <point x="1050.450520833333" y="1559.0" />
+      <point x="1525.9770359848476" y="1559.0" />
+      <point x="1525.9770359848476" y="1509.0" />
+      <point x="837.0755208333331" y="1509.0" />
+      <point x="49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.manager.ManagerController" target="com.cse544.employeemanagementsystem.employee.EmployeeDto" relationship="DEPENDENCY">
+      <point x="-87.5" y="-50.5" />
+      <point x="1156.8520359848476" y="2115.0" />
+      <point x="1321.8520359848476" y="2115.0" />
+      <point x="1321.8520359848476" y="2105.0" />
+      <point x="5.999999999999886" y="2105.0" />
+      <point x="6.0" y="1559.0" />
+      <point x="144.6167140151506" y="1559.0" />
+      <point x="144.6167140151506" y="1519.0" />
+      <point x="127.09019886363637" y="1519.0" />
+      <point x="-49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeService" target="com.cse544.employeemanagementsystem.Mapper" relationship="DEPENDENCY">
+      <point x="-68.0" y="-50.5" />
+      <point x="1507.3520359848476" y="1865.0" />
+      <point x="1243.325520833333" y="1865.0" />
+      <point x="1243.325520833333" y="1775.0" />
+      <point x="331.9505208333332" y="1775.0" />
+      <point x="331.9505208333332" y="1745.0" />
+      <point x="645.5" y="1745.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.Mapper" target="com.cse544.employeemanagementsystem.auth.UserDto" relationship="CREATE">
+      <point x="-81.25" y="-39.0" />
+      <point x="564.25" y="1549.0" />
+      <point x="392.2421874999999" y="1549.0" />
+      <point x="392.2421874999999" y="1002.0" />
+      <point x="183.46519886363637" y="1002.0" />
+      <point x="61.33333333333334" y="259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthController" target="com.cse544.employeemanagementsystem.employee.EmployeeDto" relationship="DEPENDENCY">
+      <point x="-59.5" y="-61.5" />
+      <point x="134.82552083333326" y="2115.0" />
+      <point x="65.32552083333326" y="2115.0" />
+      <point x="65.32552083333326" y="2085.0" />
+      <point x="6.0" y="2085.0" />
+      <point x="6.0" y="1559.0" />
+      <point x="144.6167140151506" y="1559.0" />
+      <point x="144.6167140151506" y="1519.0" />
+      <point x="127.09019886363637" y="1519.0" />
+      <point x="-49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.manager.ManagerService" target="com.cse544.employeemanagementsystem.Mapper" relationship="DEPENDENCY">
+      <point x="-87.5" y="-50.5" />
+      <point x="1156.8520359848476" y="1855.0" />
+      <point x="816.5901988636363" y="1855.0" />
+      <point x="816.5901988636363" y="1795.0" />
+      <point x="331.9505208333332" y="1795.0" />
+      <point x="331.9505208333332" y="1745.0" />
+      <point x="645.5" y="1745.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthService" target="com.cse544.employeemanagementsystem.Mapper" relationship="DEPENDENCY">
+      <point x="-68.0" y="-72.5" />
+      <point x="655.3667140151506" y="1865.0" />
+      <point x="234.09019886363637" y="1865.0" />
+      <point x="234.09019886363637" y="1805.0" />
+      <point x="331.9505208333332" y="1805.0" />
+      <point x="331.9505208333332" y="1745.0" />
+      <point x="645.5" y="1745.0" />
+      <point x="0.0" y="39.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.manager.Manager" target="com.cse544.employeemanagementsystem.employee.Employee" relationship="GENERALIZATION">
+      <point x="0.0" y="-61.0" />
+      <point x="920.0" y="1519.0" />
+      <point x="737.5755208333331" y="1519.0" />
+      <point x="-49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeController" target="com.cse544.employeemanagementsystem.employee.EmployeeService" relationship="TO_ONE">
+      <point x="63.25" y="-50.5" />
+      <point x="68.0" y="50.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.admin.AdminController" target="com.cse544.employeemanagementsystem.admin.AdminService" relationship="TO_ONE">
+      <point x="69.0" y="-83.5" />
+      <point x="1979.6020359848476" y="2115.0" />
+      <point x="2122.6167140151506" y="2115.0" />
+      <point x="68.0" y="83.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.Mapper" target="com.cse544.employeemanagementsystem.auth.Role" relationship="DEPENDENCY">
+      <point x="81.25" y="-39.0" />
+      <point x="726.75" y="1559.0" />
+      <point x="897.3255208333331" y="1559.0" />
+      <point x="897.3255208333331" y="440.0" />
+      <point x="889.8520359848475" y="440.0" />
+      <point x="889.8520359848475" y="430.0" />
+      <point x="883.2417140151506" y="430.0" />
+      <point x="45.0" y="204.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.Mapper" target="com.cse544.employeemanagementsystem.employee.EmployeeDto" relationship="CREATE">
+      <point x="-81.25" y="-39.0" />
+      <point x="564.25" y="1549.0" />
+      <point x="392.2421874999999" y="1549.0" />
+      <point x="392.2421874999999" y="1519.0" />
+      <point x="226.59019886363637" y="1519.0" />
+      <point x="49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.User" target="com.cse544.employeemanagementsystem.auth.Role" relationship="TO_ONE">
+      <point x="-46.0" y="-259.5" />
+      <point x="645.3520359848475" y="430.0" />
+      <point x="793.2417140151506" y="430.0" />
+      <point x="-45.0" y="204.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeController" target="com.cse544.employeemanagementsystem.employee.EmployeeDto" relationship="DEPENDENCY">
+      <point x="-63.25" y="-50.5" />
+      <point x="1516.8520359848476" y="2115.0" />
+      <point x="1633.3520359848476" y="2115.0" />
+      <point x="1633.3520359848476" y="2095.0" />
+      <point x="111.95052083333337" y="2095.0" />
+      <point x="111.95052083333326" y="1559.0" />
+      <point x="144.6167140151506" y="1559.0" />
+      <point x="144.6167140151506" y="1519.0" />
+      <point x="127.09019886363637" y="1519.0" />
+      <point x="-49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.Role" target="com.cse544.employeemanagementsystem.auth.User" relationship="TO_MANY">
+      <point x="-45.0" y="204.5" />
+      <point x="793.2417140151506" y="430.0" />
+      <point x="645.3520359848475" y="430.0" />
+      <point x="-46.0" y="-259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.AuthService" target="com.cse544.employeemanagementsystem.employee.EmployeeRepository" relationship="TO_ONE">
+      <point x="68.0" y="-72.5" />
+      <point x="791.3667140151506" y="1865.0" />
+      <point x="922.2417140151506" y="1865.0" />
+      <point x="922.2417140151506" y="1845.0" />
+      <point x="1784.1020359848476" y="1845.0" />
+      <point x="1784.1020359848476" y="1725.0" />
+      <point x="1302.125" y="1725.0" />
+      <point x="66.75" y="50.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeService" target="com.cse544.employeemanagementsystem.employee.EmployeeRepository" relationship="TO_ONE">
+      <point x="68.0" y="-50.5" />
+      <point x="1643.3520359848476" y="1855.0" />
+      <point x="1784.1020359848476" y="1855.0" />
+      <point x="1784.1020359848476" y="1725.0" />
+      <point x="1302.125" y="1725.0" />
+      <point x="66.75" y="50.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.manager.ManagerService" target="com.cse544.employeemanagementsystem.employee.EmployeeRepository" relationship="TO_ONE">
+      <point x="87.5" y="-50.5" />
+      <point x="1331.8520359848476" y="1855.0" />
+      <point x="1784.1020359848476" y="1855.0" />
+      <point x="1784.1020359848476" y="1725.0" />
+      <point x="1302.125" y="1725.0" />
+      <point x="66.75" y="50.0" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.admin.AdminController" target="com.cse544.employeemanagementsystem.employee.EmployeeDto" relationship="DEPENDENCY">
+      <point x="-69.0" y="-83.5" />
+      <point x="1841.6020359848476" y="2115.0" />
+      <point x="1949.075520833333" y="2115.0" />
+      <point x="1949.075520833333" y="2075.0" />
+      <point x="129.47703598484748" y="2075.0" />
+      <point x="129.47703598484748" y="1559.0" />
+      <point x="144.6167140151506" y="1559.0" />
+      <point x="144.6167140151506" y="1519.0" />
+      <point x="127.09019886363637" y="1519.0" />
+      <point x="-49.75" y="226.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.employee.EmployeeDto" target="com.cse544.employeemanagementsystem.auth.UserDto" relationship="GENERALIZATION">
+      <point x="-49.75" y="-226.5" />
+      <point x="127.09019886363637" y="1012.0" />
+      <point x="122.131865530303" y="1012.0" />
+      <point x="0.0" y="259.5" />
+    </edge>
+    <edge source="com.cse544.employeemanagementsystem.auth.UserDto" target="com.cse544.employeemanagementsystem.auth.RoleInfo" relationship="DEPENDENCY">
+      <point x="46.0" y="-259.5" />
+      <point x="168.131865530303" y="440.0" />
+      <point x="166.9917140151506" y="440.0" />
+      <point x="0.0" y="127.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.7345458458889367" showDependencies="true" x="512.5215939187542" y="672.9378790986609" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

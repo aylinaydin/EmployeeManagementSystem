@@ -1,20 +1,23 @@
 package com.cse544.employeemanagementsystem.employee;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
 import java.util.UUID;
 
-@Controller
+@RestController
+@RequestMapping("/employee")
+@CrossOrigin(origins = "http://localhost:4200")
 public class EmployeeController {
     @Autowired
     EmployeeService empService;
 
-    public Employee getEmployeeInfo(UUID employeeID){
-        return empService.getEmployeeInfo(employeeID);
+    @GetMapping("/{id}")
+    public EmployeeDto getEmployeeInfo(@PathVariable  UUID id){
+        return empService.getEmployeeInfo(id);
     }
-    public void enterLeaves(Date from, Date to){
-        empService.enterLeaves(from,to);
+    @PutMapping("/enterLeaves")
+    public Boolean enterLeaves(@RequestBody int leaveNum, @RequestBody UUID id ){
+        return empService.enterLeaves(leaveNum,id);
     }
 }

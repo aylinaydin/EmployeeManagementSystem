@@ -13,6 +13,7 @@ import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
@@ -31,11 +32,11 @@ public class AdminService {
     public Employee editEmployee(Employee employee){
         return employeeRepository.save(employee);
     }
-    public boolean updateSalaryForAllEmployees(){
-        //logic
-        return true;
+
+    public List<Employee> getAllEmployee(){
+        return employeeRepository.findAll();
     }
-    public boolean updateSalaryForSpecificEmployee(UUID employeeId){
+    public boolean updateSalaryForAllEmployees(){
         //logic
         return true;
     }
