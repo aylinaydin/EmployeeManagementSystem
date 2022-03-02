@@ -30,6 +30,10 @@ public class AdminService {
         employeeRepository.deleteById(id);
     }
     public Employee editEmployee(Employee employee){
+        Employee emp = employeeRepository.findByEmail(employee.getEmail());
+        if(emp!=null){
+            employee.setId(emp.getId());
+        }
         return employeeRepository.save(employee);
     }
 

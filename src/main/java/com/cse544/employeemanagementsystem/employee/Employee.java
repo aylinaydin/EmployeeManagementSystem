@@ -20,9 +20,9 @@ public class Employee extends User {
     @NonNull
     private Integer annualLeave;
     private Integer grade;
-    private UUID managerId;
+    private Integer managerId;
 
-    public Employee(@NonNull String username, @NonNull String email, @NonNull String password, boolean enabled, @NonNull String title, @NonNull Integer salary, @NonNull Integer annualLeave, Integer grade, UUID managerId) {
+    public Employee(@NonNull String username, @NonNull String email, @NonNull String password, boolean enabled, @NonNull String title, @NonNull Integer salary, @NonNull Integer annualLeave, Integer grade, Integer managerId) {
         super(username, email, password, enabled);
         this.title = title;
         this.salary = salary;

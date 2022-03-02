@@ -1,4 +1,4 @@
-export interface Employee {
+export interface NewEmployeeForm {
   username: string;
   email: string;
   password: string,
@@ -6,7 +6,7 @@ export interface Employee {
   title: string;
   salary: number;
   annualLeave: number;
-  grade: string;
+  grade: number;
   managerId: string;
-
+  isManager: boolean
 }

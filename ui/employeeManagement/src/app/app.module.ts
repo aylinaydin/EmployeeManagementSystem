@@ -16,13 +16,25 @@ import {MatCardModule} from "@angular/material/card";
 import {HttpClientModule} from "@angular/common/http";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatTableModule} from "@angular/material/table";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import { AddEmployeeDialogComponent } from './add-employee-dialog/add-employee-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import { EmployeeComponent } from './employee/employee.component';
+import { ManagerComponent } from './manager/manager.component';
+import {MatListModule} from "@angular/material/list";
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    AddEmployeeDialogComponent,
+    EmployeeComponent,
+    ManagerComponent
   ],
     imports: [
         BrowserModule,
@@ -37,7 +49,13 @@ import {MatTableModule} from "@angular/material/table";
         MatCardModule,
         HttpClientModule,
         MatSnackBarModule,
-        MatTableModule
+        MatTableModule,
+        MatTooltipModule,
+        MatToolbarModule,
+        MatPaginatorModule,
+        MatDialogModule,
+        MatCheckboxModule,
+        MatListModule
     ],
   providers: [],
   bootstrap: [AppComponent]

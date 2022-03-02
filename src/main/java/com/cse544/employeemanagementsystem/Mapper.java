@@ -9,7 +9,13 @@ import com.cse544.employeemanagementsystem.employee.EmployeeDto;
 public class Mapper {
 
     public static UserDto userToUserDto(User user) {
-        RoleInfo roleInfo = new RoleInfo(user.getRole().getRoleId(), user.getRole().getName());
+        long roleId = 0;
+        String roleName = null;
+        if(user.getRole()!=null){
+            roleId = user.getRole().getRoleId();
+            roleName = user.getRole().getName();
+        }
+        RoleInfo roleInfo = new RoleInfo(roleId, roleName);
         return new UserDto(
                 user.getId(),
                 user.getUsername(),

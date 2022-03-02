@@ -1,0 +1,46 @@
+<div class="employee-page">
+  <mat-toolbar color="primary">
+    <span>Employee Management System</span>
+    <span class="spacer"></span>
+    <button mat-icon-button (click)="onLogoutClick()">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar>
+  <div class="example-card" *ngIf="employee">
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{employee.email}}</mat-card-title>
+        <mat-card-subtitle>Title: {{employee.title}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item >
+            <mat-icon mat-list-icon>attach_money</mat-icon>
+            <div mat-line>Salary</div>
+            <div mat-line>{{employee.salary}}</div>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item >
+            <mat-icon mat-list-icon>grade</mat-icon>
+            <div mat-line>Grade</div>
+            <div mat-line>{{employee.grade}}</div>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item >
+            <mat-icon mat-list-icon>calendar_today</mat-icon>
+            <div mat-line>Annual Leave</div>
+            <div mat-line>{{employee.annualLeave}}</div>
+          </mat-list-item>
+          <mat-list-item >
+            <mat-icon mat-list-icon>account_box</mat-icon>
+            <div mat-line>Manager Id</div>
+            <div mat-line>{{employee.managerId}}</div>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
+

@@ -1,6 +1,7 @@
 package com.cse544.employeemanagementsystem.admin;
 
 import com.cse544.employeemanagementsystem.Mapper;
+import com.cse544.employeemanagementsystem.auth.Role;
 import com.cse544.employeemanagementsystem.auth.User;
 import com.cse544.employeemanagementsystem.employee.Employee;
 import com.cse544.employeemanagementsystem.employee.EmployeeDto;
@@ -19,18 +20,17 @@ public class AdminController {
     AdminService adminService;
 
     @PostMapping("/employee")
-    public Employee addEmployee(@RequestBody Employee employee){
-        return adminService.addEmployee(employee);
+    public EmployeeDto addEmployee(@RequestBody Employee employee){
+        return Mapper.employeeToEmployeeDto(adminService.addEmployee(employee));
     }
     @DeleteMapping("/{id}")
     public void deleteEmployee(@PathVariable UUID id){
 
         adminService.deleteEmployee(id);
     }
-    @PutMapping()
-    public Employee editEmployee(@RequestBody Employee employee){
-
-        return adminService.editEmployee(employee);
+    @PutMapping("/editEmployee")
+    public EmployeeDto editEmployee(@RequestBody Employee employee){
+        return Mapper.employeeToEmployeeDto(adminService.editEmployee(employee));
     }
 
     @GetMapping("/listEmployees")
